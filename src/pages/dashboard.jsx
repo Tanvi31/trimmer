@@ -31,7 +31,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fnUrls();
-  }, [fnUrls]);
+  }, []);
 
   const filteredUrls = urls?.filter((url) =>
     url.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (urls?.length) fnClicks();
-  }, [fnClicks, urls?.length]);
+  }, [urls?.length]);
 
   return (
     <div className="flex flex-col gap-8">
